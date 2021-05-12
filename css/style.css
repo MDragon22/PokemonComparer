@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    padding-top: 90px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: red;
+    background-image: url("../gallery/Pokemon-Header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header h1 {
+    color: yellow;
+    margin-top: 60px;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px blue;
+}
+
+.header p {
+    font-size: large;
+    font-weight: bolder;
+    color: yellow;
+    text-shadow: 2px 2px 5px blue;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #00bcd4;
+    box-shadow: inset 0px 0px 10px blue;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.navbar input {
+    margin-top: 12.5px;
+    float: right;
+    outline: none;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    user-select: none;
+    float: right;
+    cursor: pointer;
+}
+
+.navbar a.right:active {
+    background-color: #ffeb3b;
+    color: #00bcd4;
+}
+
+.navbar a:hover {
+    box-shadow: inset 0px 0px 10px blue;
+    color: black;
+}
+
+.navbar a.active {
+    box-shadow: inset 0px 0px 20px #2806ea;
+    color: white;
+}
+
+.footer {
+    padding: 5px;
+    text-align: center;
+    background-color: #00bcd4;
+    box-shadow: inset 0px 0px 10px blue;
+}
