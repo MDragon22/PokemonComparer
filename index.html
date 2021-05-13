@@ -2,14 +2,18 @@
 <html>
 
 <head>
-    <title>---</title>
+    <title>pokemano</title>
     <script type="text/javascript" src="js\pokemon.js"></script>
     <link rel="stylesheet" type="text/css" href="css\style.css">
+    <link rel="stylesheet" type="text/css" href="css\loadicon.css">
+    <link rel="stylesheet" type="text/css" href="css\pokestats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body>
     <div class="header">
-        <h1>Pokemon Comparer</h1>
+        <h1>Pokemano</h1>
         <p>The <b>website</b> created to compare all the pokemon stats</p>
     </div>
     <div class="navbar">
@@ -17,53 +21,62 @@
         <a href="">Link</a>
         <a href="">Link</a>
 
-        <a onclick="run()" class="right">Pokesearch</a>
+        <a id="pokebutton" onclick="run()" class="right">Pokesearch</a>
         <input id="inputpoke" type="text" name="pokesearch" value="">
     </div>
-    <br />
-    <form>
-        <input id="inputpoke" type="text" name="inputpokemon" value="">
-        <input type="button" name="buttongo" value="go" onclick="run()">
-    </form>
-    <p id="demo">fail to load API</p>
-    <img id="pokemonsprite" alt="failed to load api image">
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+    <div class="opaque" id="loader">
+    <div class="pokeball"> </div>
+   </div>
+    <div class="globalwrapper">
+
+      <div class="collum">
+
+
+
+
+
+        <p class="stat0" id="demo">fail to load API</p>
+        <img class="sprite" id="pokemonsprite" alt="failed to load api image" >
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <p> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+      </div>
+    </div>
+
+
     <div class="footer">
         <h2>Pêzeiro</h2>
     </div>
 </body>
-
-
+<script type="text/javascript" src="js\pokemon.js"></script>
 </html>
