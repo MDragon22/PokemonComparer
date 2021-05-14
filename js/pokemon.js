@@ -20,12 +20,15 @@ async function runfetch(fetchpokemon) {
         loader.style.display = 'none';
         let json = await response.json();
         document.getElementById("pokemonsprite").src = await json.sprites.front_default;
+        //document.getElementById("pokemonbacksprite").src = await json.sprites.back_default;
         id = await json.id;
         hp = await json.stats[0].base_stat;
         atk = await json.stats[1].base_stat;
         def = await json.stats[2].base_stat
         statsmaker(hp, atk, def);
-        document.getElementById("pokename").innerHTML = await json.name;
+        name = await json.name;
+        nameup = name.charAt(0).toUpperCase() + name.slice(1)
+        document.getElementById("pokename").innerHTML = nameup;
         document.getElementById("pokeID").innerHTML = "#" + id;
         type = await json.types[0].type.name;
         document.getElementById("type1").innerHTML = type;
@@ -58,6 +61,9 @@ function crossRight() {
     loader.style.display = 'block';
     var apibase = "https://pokeapi.co/api/v2/pokemon/";
     counter = counter + 1;
+    if (counter == 899){
+      counter = 1;
+    }
     var fetchpokemon = apibase + counter;
     runfetch(fetchpokemon);
 }
@@ -67,6 +73,9 @@ function crossLeft() {
     loader.style.display = 'block';
     var apibase = "https://pokeapi.co/api/v2/pokemon/";
     counter = counter - 1;
+    if (counter == 0){
+      counter = 898;
+    }
     var fetchpokemon = apibase + counter;
     runfetch(fetchpokemon);
 }

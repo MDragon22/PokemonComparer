@@ -1,4 +1,63 @@
-.sprite {}
+.statbox{
+  height: 500px;
+}
+
+.nameIDsprite{
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.pokenameID{
+ float: left;
+}
+
+.pokename {
+    /*background-image: url("../gallery/gback.jpg");*/
+    float: left;
+}
+
+.pokeID {
+    float: right;
+}
+
+.pokenameID {
+    background: linear-gradient( 14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
+    width: 230px;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: inset #879a65 3px;
+
+}
+
+.spritecont{
+  width: 200px;
+  padding: 22px;
+
+}
+
+.sprite {
+
+ width: 200px;
+}
+
+.poketype {
+  text-align: center;
+  margin-left: 10px;
+
+
+}
+
+.buttonElement{
+
+}
+
+
+
+.buttoncross {
+
+
+}
 
 .contb {
     width: 100%;
@@ -28,28 +87,8 @@
     background-color: #f44336;
 }
 
-.pokename {
-    /*background-image: url("../gallery/gback.jpg");*/
-    float: left;
-}
 
-.pokeID {
-    float: right;
-}
 
-.pokenameID {
-    background: linear-gradient( 14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
-    width: 350px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 3px;
-    border: inset #879a65 3px;
-    display: inline-block;
-}
-
-.buttoncross {
-    display: inline-block;
-}
 
 .crossCenter {
     background-color: #333333;
@@ -71,6 +110,8 @@
 }
 
 .crossTop {
+    line-height: 35px;
+    text-align: center;
     background-color: #333333;
     width: 35px;
     height: 35px;
@@ -80,6 +121,8 @@
 }
 
 .crossBottom {
+    line-height: 35px;
+    text-align: center;
     background-color: #333333;
     width: 35px;
     height: 35px;
@@ -89,6 +132,8 @@
 }
 
 .crossLeft {
+    line-height: 35px;
+    text-align: center;
     background-color: #333333;
     width: 35px;
     height: 35px;
@@ -98,18 +143,19 @@
 }
 
 .crossRight {
+
+    line-height: 35px;
+    text-align: center;
     background-color: #333333;
     width: 35px;
     height: 35px;
     position: absolute;
     border-radius: 15%;
     margin-left: 30px;
+
 }
 
-.poketype {
-    text-align: center;
-    display: inline-block;
-}
+
 
 .type2 {
     display: block;
@@ -211,4 +257,55 @@ p[name="unknown"] {
 
 p[name="shadow"] {
     background-color: #364163;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.pressed{
+  box-shadow: 0 9px #999;
+}
+
+.pressed:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.crossTop:active {
+
+  transform: translateY(4px);
+}
+
+.pressed:hover{
+  background-color: #232323;
+}
+
+.crossTop:hover{
+  background-color: #232323;
+
 }

@@ -19,10 +19,10 @@
     </div>
     <div class="navbar">
         <a href="" class="active pokefonte">Home</a>
-        <a href="" class="pokefonte">Link</a>
+        <a href="pagecomparer.html" class="pokefonte">Link</a>
         <a href="" class="pokefonte">Link</a>
 
-        <a id="pokebutton" onclick="run()" class="right pokefonte">Pokesearch</a>
+        <a id="pokebutton" onclick="run()" class="r pokefonte">Pokesearch</a>
         <input id="inputpoke" type="text" name="pokesearch" value="">
     </div>
     <div class="opaque" id="loader">
@@ -33,29 +33,39 @@
         <div class="collum">
 
             <div class="statbox">
-
+              <div class="nameIDsprite">
                 <div class="pokenameID">
                     <p class="pokefonte pokename" id="pokename">bulbasaur</p>
                     <p class="pokefonte pokeID" id="pokeID">#001</p>
                 </div>
+                <div class="spritecont">
+                  <img class="sprite" id="pokemonsprite" alt="imagempokemon">
+                </div>
+              </div>
 
-                <img class="sprite" id="pokemonsprite" alt="imagempokemon">
+
+                <!--<img class="sprite" id="pokemonbacksprite" alt="imagempokemon">-->
 
                 <div class="poketype">
                     <p id="type1" class="type type1 pokefonte" name="">Tipo 1</p>
                     <p id="type2" class="type type2 pokefonte" name="">Tipo 2</p>
                 </div>
 
-                <div class=buttoncross>
-                    <div class=circle></div>
-                    <div class=crossCenter>
-                        <div class=crossTop></div>
-                        <div class=crossBottom></div>
-                        <div onclick="crossLeft()" class=crossLeft></div>
-                        <div onclick="crossRight()" class=crossRight></div>
+
+                <div class="buttonElement">
+                <div class="buttoncross">
+                    <div class="circle"></div>
+                    <div class="crossCenter">
+                      <div onclick="crossLeft()" class="crossLeft pressed"><i class="arrow left"></i></div>
+                      <div onclick="crossRight()" class="crossRight pressed"><i class="arrow right"></i></div>
+
+                        <div class="crossBottom pressed"><i class="arrow down"></i></div>
+                        <div class="crossTop "><i class="arrow up"></i></div>
+
                         <div class=crossCircle></div>
                     </div>
                 </div>
+              </div>
 
                 <p class="pokefonte">Exemplo alguma barra status</p>
 
