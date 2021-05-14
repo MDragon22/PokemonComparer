@@ -1,42 +1,75 @@
+var id = null;
+runfetch("https://pokeapi.co/api/v2/pokemon/1")
+
 function run() {
     loader.style.display = 'block';
     var apibase = "https://pokeapi.co/api/v2/pokemon/";
     var input = "error"
-    if (document.getElementById("inputpoke").value != ""){
-      var input = document.getElementById("inputpoke").value;
+    if (document.getElementById("inputpoke").value != "") {
+        var input = document.getElementById("inputpoke").value;
     }
 
     var fetchpokemon = apibase + input;
     runfetch(fetchpokemon);
 
 }
-async function response(fetchpokemon){
 
-}
 async function runfetch(fetchpokemon) {
-  let response = await fetch(fetchpokemon);
-
-  if (response.ok){
-    loader.style.display = 'none';
-    let json = await response.json();
-    document.getElementById("pokemonsprite").src = await json.sprites.front_default;
-  }else{
-    loader.style.display = 'none';
-    alert("HTTP-Error: " + response.status);
-  }
-
-
-
-    /*fetch(fetchpokemon)
-        .then(res => res.json())
-        .then(result => {
-            console.log(result.status);
-            document.getElementById("demo").innerHTML = result.name;
-            document.getElementById("pokemonsprite").src = result.sprites.front_default;
-            showstats();
-        })*/
+    let response = await fetch(fetchpokemon);
+    if (response.ok) {
+        loader.style.display = 'none';
+        let json = await response.json();
+        document.getElementById("pokemonsprite").src = await json.sprites.front_default;
+        id = await json.id;
+        hp = await json.stats[0].base_stat;
+        atk = await json.stats[1].base_stat;
+        def = await json.stats[2].base_stat
+        statsmaker(hp, atk, def);
+        document.getElementById("pokename").innerHTML = await json.name;
+        document.getElementById("pokeID").innerHTML = "#" + id;
+        type = await json.types[0].type.name;
+        document.getElementById("type1").innerHTML = type;
+        document.getElementById("type1").setAttribute("name", type);
+        if (await json.types.length == 1) {
+            document.getElementById("type2").style.display = "none";
+        } else {
+            document.getElementById("type2").style.display = "block";
+            var type = await json.types[1].type.name;
+            document.getElementById("type2").innerHTML = type;
+            document.getElementById("type2").setAttribute("name", type);
+        }
+    } else {
+        loader.style.display = 'none';
+        alert("Pokemon não existe");
+    }
 }
 
+function statsmaker(hp, atk, def) {
+    document.getElementById("barra0").innerHTML = hp;
+    document.getElementById("barra0").style.width = hp / 3 + "%";
+    document.getElementById("barra1").innerHTML = atk;
+    document.getElementById("barra1").style.width = atk / 3 + "%";
+    document.getElementById("barra2").innerHTML = def;
+    document.getElementById("barra2").style.width = def / 3 + "%";
+}
+
+function crossRight() {
+    counter = id;
+    loader.style.display = 'block';
+    var apibase = "https://pokeapi.co/api/v2/pokemon/";
+    counter = counter + 1;
+    var fetchpokemon = apibase + counter;
+    runfetch(fetchpokemon);
+}
+
+function crossLeft() {
+    counter = id;
+    loader.style.display = 'block';
+    var apibase = "https://pokeapi.co/api/v2/pokemon/";
+    counter = counter - 1;
+    var fetchpokemon = apibase + counter;
+    runfetch(fetchpokemon);
+}
 /*function showstats(){
   var spr = document.getElementById("pokemonsprite");
   if (spr.src != null){
@@ -45,13 +78,15 @@ async function runfetch(fetchpokemon) {
   else{
     spr.style.display = "none";
   }
-}
-
+}*/
+/*
 var input = document.getElementById("inputpoke");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
+if(input){
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
 
-   event.preventDefault();
-   run();
-  }
-});*/
+     event.preventDefault();
+     run();
+    }
+  });
+}*/

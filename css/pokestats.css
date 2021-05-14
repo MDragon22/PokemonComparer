@@ -1,8 +1,214 @@
-.sprite{
+.sprite {}
 
-
+.contb {
+    width: 100%;
+    background-color: #ddd;
 }
 
-.stat0{
+.barrastats {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
 
+.barra0 {
+    width: 90%;
+    background-color: #04AA6D;
+}
+
+.barra1 {
+    width: 80%;
+    background-color: #2196F3;
+}
+
+.barra2 {
+    $corner-size 1;
+    width: 65%;
+    background-color: #f44336;
+}
+
+.pokename {
+    /*background-image: url("../gallery/gback.jpg");*/
+    float: left;
+}
+
+.pokeID {
+    float: right;
+}
+
+.pokenameID {
+    background: linear-gradient( 14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
+    width: 350px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+    border: inset #879a65 3px;
+    display: inline-block;
+}
+
+.buttoncross {
+    display: inline-block;
+}
+
+.crossCenter {
+    background-color: #333333;
+    width: 35px;
+    height: 35px;
+    margin-top: 110px;
+    margin-left: 100px;
+    position: relative;
+}
+
+.crossCircle {
+    background-color: #292929;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.crossTop {
+    background-color: #333333;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 15%;
+    margin-top: -30px;
+}
+
+.crossBottom {
+    background-color: #333333;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 15%;
+    margin-top: 30px;
+}
+
+.crossLeft {
+    background-color: #333333;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 15%;
+    margin-left: -30px;
+}
+
+.crossRight {
+    background-color: #333333;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 15%;
+    margin-left: 30px;
+}
+
+.poketype {
+    text-align: center;
+    display: inline-block;
+}
+
+.type2 {
+    display: block;
+}
+
+.type {
+    color: rgba(0, 0, 0, 0.9);
+    text-transform: capitalize;
+    font-size: 1.25em;
+    padding: 2px;
+    margin: 2px;
+    border: groove #757575 3px;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 150px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: rgba(255, 255, 255, 0.3) -1px 1px;
+    align-self: center;
+    background: linear-gradient( 15deg, rgba(128, 128, 128, 0.5) 64%, rgba(138, 138, 138, 0.5) 70%, rgba(230, 230, 230, 0.5) 81%, rgba(255, 255, 255, 0.5) 86%, rgba(220, 220, 220, 0.5) 89%, rgba(230, 230, 230, 0.5) 100%);
+    background-blend-mode: hard-light;
+}
+
+p[name="normal"] {
+    background-color: #bfbfbf;
+}
+
+p[name="fighting"] {
+    background-color: #d87c58;
+}
+
+p[name="flying"] {
+    background-color: #999ade;
+}
+
+p[name="poison"] {
+    background-color: #925192;
+}
+
+p[name="ground"] {
+    background-color: #dea761;
+}
+
+p[name="rock"] {
+    background-color: #897864;
+}
+
+p[name="bug"] {
+    background-color: #b1c967;
+}
+
+p[name="ghost"] {
+    background-color: #c195dc;
+}
+
+p[name="steel"] {
+    background-color: #49769c;
+}
+
+p[name="fire"] {
+    background-color: #cf1414;
+}
+
+p[name="water"] {
+    background-color: #1689de;
+}
+
+p[name="grass"] {
+    background-color: #47a047;
+}
+
+p[name="electric"] {
+    background-color: #e6b700;
+}
+
+p[name="psychic"] {
+    background-color: #fa43b8;
+}
+
+p[name="ice"] {
+    background-color: #98c3de;
+}
+
+p[name="dragon"] {
+    background-color: #89315d;
+}
+
+p[name="dark"] {
+    background-color: #282433;
+}
+
+p[name="fairy"] {
+    background-color: #dca0ce;
+}
+
+p[name="unknown"] {
+    background-color: #545454;
+}
+
+p[name="shadow"] {
+    background-color: #364163;
 }

@@ -57,12 +57,14 @@ body {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+    font-size: 12px;
 }
 
 .navbar a.right {
     user-select: none;
     float: right;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .navbar a.right:active {
@@ -80,21 +82,20 @@ body {
     color: white;
 }
 
-.globalwrapper{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.globalwrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.collum{
-  border: 1px solid #03a9f4;
-  padding: 50px;
-  background-color: #e9f1f5;
-  display: inline;
-  border-radius: 20px;
-  margin: 50px;
+.collum {
+    border: 1px solid #03a9f4;
+    padding: 50px;
+    background-color: #e9f1f5;
+    display: inline;
+    border-radius: 20px;
+    margin: 50px;
 }
 
 .footer {
@@ -102,4 +103,8 @@ body {
     text-align: center;
     background-color: #00bcd4;
     box-shadow: inset 0px 0px 10px blue;
+}
+
+.pokefonte {
+    font-family: "pokemon-font";
 }
