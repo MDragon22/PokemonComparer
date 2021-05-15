@@ -17,7 +17,7 @@ function run() {
 async function runfetch(fetchpokemon) {
     let response = await fetch(fetchpokemon);
     if (response.ok) {
-        loader.style.display = 'none';
+
         let json = await response.json();
         document.getElementById("pokemonsprite").src = await json.sprites.front_default;
         //document.getElementById("pokemonbacksprite").src = await json.sprites.back_default;
@@ -27,6 +27,11 @@ async function runfetch(fetchpokemon) {
         def = await json.stats[2].base_stat
         statsmaker(hp, atk, def);
         name = await json.name;
+        weight = await json.weight;
+        height = await json.height;
+        speciesfetch(id);
+        document.getElementById("infoweight").innerHTML = "Weight:" + weight/10 + "kg";
+        document.getElementById("infoheight").innerHTML = "Height:" + height/10 + "m";
         nameup = name.charAt(0).toUpperCase() + name.slice(1)
         document.getElementById("pokename").innerHTML = nameup;
         document.getElementById("pokeID").innerHTML = "#" + id;
@@ -41,6 +46,7 @@ async function runfetch(fetchpokemon) {
             document.getElementById("type2").innerHTML = type;
             document.getElementById("type2").setAttribute("name", type);
         }
+        loader.style.display = 'none';
     } else {
         loader.style.display = 'none';
         alert("Pokemon não existe");
@@ -79,6 +85,19 @@ function crossLeft() {
     var fetchpokemon = apibase + counter;
     runfetch(fetchpokemon);
 }
+
+async function speciesfetch(id) {
+  fetchspecie = "https://pokeapi.co/api/v2/pokemon-species/" + id;
+  let responsespc = await fetch(fetchspecie);
+  let jsonspc = await responsespc.json();
+  genderratio = await jsonspc.gender_rate;
+  female = genderratio/8 * 100;
+  male = 100 - female;
+  habitat = await jsonspc.habitat.name;
+  document.getElementById("infogender").innerHTML = "Gender:M" + male + "%-F" + female + "%";
+  document.getElementById("infohabitat").innerHTML = "Habitat:" + habitat;
+}
+
 /*function showstats(){
   var spr = document.getElementById("pokemonsprite");
   if (spr.src != null){

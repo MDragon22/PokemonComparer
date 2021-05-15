@@ -40,6 +40,7 @@ body {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    z-index:1;
 }
 
 .navbar input {
@@ -48,6 +49,8 @@ body {
     margin-top: 7.5px;
     float: right;
     outline: none;
+    font-size: 10px;
+    color: gray;
 }
 
 .navbar a {
@@ -96,6 +99,7 @@ body {
     display: inline;
     border-radius: 20px;
     margin: 50px;
+    min-width: 1000px;
 }
 
 .footer {
@@ -104,6 +108,7 @@ body {
     bottom: 0;
     width: 100%;
     padding: 5px;
+
     text-align: center;
     background-color: #00bcd4;
     box-shadow: inset 0px 0px 10px blue;
@@ -118,5 +123,5 @@ body {
 }
 
 .secondpanel{
-  
+
 }

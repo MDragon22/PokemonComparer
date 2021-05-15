@@ -1,74 +1,262 @@
 .statbox{
-  height: 500px;
+
+}
+
+.redbox{
+  width: 400px;
+  height: 650px;
+  border: inset #b31818 3px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  background: #d00a0a;
+}
+
+.box1{
+  position: relative;
+  margin-top: 80px;
+  height: 570px;
+}
+
+.box2{
+
+}
+
+.statbox{
+  background-color: #e61515;
+  width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 15px;
+  border: double black 10px;
+  display: flex;
+}
+
+.smalldesc{
+  position: absolute;
+  font-size: 10px;
+  letter-spacing: 0;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  width: 208px;
+  box-sizing: border-box;
+  margin: 8px;
+  flex: 1;
+  background: linear-gradient(15deg, #8191cc 64%, #b7badc 70%, #b7badc 81%, #fff 86%, #b7badc 89%, #b7badc 100%);
+  padding-left: 1px;
+
+  border-radius: 8px;
+  font-family: "pokemon-font";
+  border: inset #656f9a 3px;
+
+}
+
+.buttonElement{
+ position: absolute;
+ margin: 5px;
+ margin-bottom: 10px;
+ bottom: 0;
+ right: 0;
+}
+
+
+.separador{
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  margin: 0 20px;
+  align-items: center;
+  border: inset #460f0f 4px;
+  border-radius: 4px;
+  background: #460f0f;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+
+.separador > * {
+  border-radius: 4px;
+    border: solid #2d0d0d 2px;
+}
+
+.ponta:first-child{
+  border-radius: 0 0 5px 5px;
+border-top: none;
+}
+
+.ponta{
+  background: linear-gradient(90deg, #460f0f 0, #891313 30%, #b31818 45%, #fd5555 65%, #b31818 95%);
+border-top-color: #891313;
+border-right-color: #b31818;
+flex: 1;
+width: 95%;
+}
+
+.meio{
+  background: linear-gradient(90deg, #891313 0, #b31818 30%, #e61515 45%, #fd5555 65%, #e61515 95%);
+border-right-color: #fd5555;
+border-top-color: #fd5555;
+flex: 10;
+width: 100%;
+border-left-color: #5f1010;
+}
+
+.ponta:last-child{
+  border-radius: 5px 5px 0 0;
+}
+
+.bluebutton{
+
+      padding: 5px;
+      width: 61px;
+      height: 61px;
+      border-radius: 50%;
+      border: outset rgb(248, 187, 187) 6px;
+      transform: rotate(60deg);
+      background: radial-gradient(
+          circle farthest-corner at 40% 25%,
+          rgb(218, 237, 241) 9%,
+          rgb(124, 214, 237) 20%,
+          rgb(64, 90, 165) 62%,
+          rgb(43, 125, 196) 100%
+      );
+
+      position: absolute;
+}
+
+
+.bluebutton:after{
+  position: absolute;
+  border: groove #460f0f 5px;
+content: "";
+width: 60px;
+height: 60px;
+position: absolute;
+border-radius: 50%;
+left: -10px;
+top: -10px;
+border-style: double;
+opacity: 0.75;
 }
 
 .nameIDsprite{
-  display: inline-block;
-  border: 1px solid black;
+  background: #9a9a9a;
+  border: inset #6b6a6a 3px;
+  border-radius: 5px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  width: 250px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  position:relative;
+  overflow:hidden;
+  margin: 20px auto;
+
+}
+
+.nameIDsprite:after{
+content: "";
+position:absolute;
+margin:-50px;
+margin-top: 10px;
+width:80px;
+height:80px;
+transform:rotate(45deg);
+background-color:#d00a0a;
+
+
 }
 
 .pokenameID{
+display: block;
  float: left;
 }
 
 .pokename {
+    display: block;
     /*background-image: url("../gallery/gback.jpg");*/
+    margin: 1px;
     float: left;
 }
 
 .pokeID {
     float: right;
+    margin: 1px;
 }
 
 .pokenameID {
+    margin-bottom: 10px;
     background: linear-gradient( 14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
-    width: 230px;
-    font-size: 10px;
+    width: 228px;
+    height: 30px;
+    font-size: 13px;
     padding-left: 5px;
     padding-right: 5px;
     border: inset #879a65 3px;
 
 }
 
+.sprite{
+  width: 100%;
+  display: flex;
+  image-rendering: pixelated;
+  border: inset #9aa28b 3px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background: linear-gradient(15deg, #8191cc 64%, #b7badc 70%, #b7badc 81%, #fff 86%, #b7badc 89%, #b7badc 100%);
+
+}
+
 .spritecont{
-  width: 200px;
-  padding: 22px;
 
 }
+/*.sprite {
+  image-rendering: pixelated;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+width: 230px;
+height: 230px;
 
-.sprite {
-
- width: 200px;
-}
+}*/
 
 .poketype {
   text-align: center;
   margin-left: 10px;
-
-
+  height: 65px;
 }
-
-.buttonElement{
-
-}
-
-
 
 .buttoncross {
+ width: 105px;
+ height: 105px;
+ margin: 0 auto;
+ padding: 35px;
 
+}
+
+.containerbarras{
 
 }
 
 .contb {
-    width: 100%;
+    width: 200px;
     background-color: #ddd;
+    border: 1px solid green;
+    margin-bottom: 2px;
 }
 
 .barrastats {
     text-align: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     color: white;
+
 }
 
 .barra0 {
@@ -94,12 +282,12 @@
     background-color: #333333;
     width: 35px;
     height: 35px;
-    margin-top: 110px;
-    margin-left: 100px;
-    position: relative;
+
+
 }
 
 .crossCircle {
+
     background-color: #292929;
     width: 25px;
     height: 25px;
@@ -110,6 +298,7 @@
 }
 
 .crossTop {
+    cursor: pointer;
     line-height: 35px;
     text-align: center;
     background-color: #333333;
@@ -121,6 +310,7 @@
 }
 
 .crossBottom {
+    cursor: pointer;
     line-height: 35px;
     text-align: center;
     background-color: #333333;
@@ -132,6 +322,7 @@
 }
 
 .crossLeft {
+    cursor: pointer;
     line-height: 35px;
     text-align: center;
     background-color: #333333;
@@ -143,7 +334,7 @@
 }
 
 .crossRight {
-
+    cursor: pointer;
     line-height: 35px;
     text-align: center;
     background-color: #333333;
@@ -307,5 +498,98 @@ p[name="shadow"] {
 
 .crossTop:hover{
   background-color: #232323;
+
+}
+
+.linedec{
+  width: 70px;
+  height: 4px;
+  background-color: #272727;
+  border-bottom: 2px solid #505050;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.decorationlines{
+  position: absolute;
+  margin-right: 30px;
+  right: 0;
+}
+
+.redbutton{
+    background: radial-gradient(
+        circle farthest-corner at 40% 25%,
+        rgb(236, 85, 85) 9%,
+        rgb(236, 85, 85) 20%,
+        rgb(193, 11, 11) 62%,
+        rgb(165, 1, 1) 100%
+    );
+    width: 30px;
+    height: 30px;
+    border: 3px solid #383838;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 35px;
+}
+
+.shinybt {
+  cursor: pointer;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.9);
+  text-transform: capitalize;
+  font-size: 1.25em;
+  padding: 2px;
+  margin: 2px;
+  border: groove #757575 3px;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 150px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: rgba(255, 255, 255, 0.3) -1px 1px;
+  align-self: center;
+  background-blend-mode: hard-light;
+  background: linear-gradient(14deg, #bf8823 10%, #ffee90 25%, #e6a617 47%, #ffee90 73%, #fff6c8 74%, #ffee90 80%);
+  position: absolute;
+  margin-left: 8px;
+}
+
+.backbt{
+  cursor: pointer;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.9);
+  text-transform: capitalize;
+  font-size: 1.25em;
+  padding: 2px;
+  margin: 2px;
+  border: groove #757575 3px;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 150px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: rgba(255, 255, 255, 0.3) -1px 1px;
+  align-self: center;
+  background: linear-gradient(14deg, #21c121 10%, #8ffb8f 25%, #17e617 47%, #8cf58c 73%, #c4f7c4 74%, #91ff91 80%);
+  background-blend-mode: hard-light;
+  position: absolute;
+  right: 0;
+  margin-right: 8px;
+
+}
+.backbt.pressed{
+  box-shadow: 0 9px #318635;
+}
+.shinybt.pressed{
+  box-shadow: 0 9px #a0a01b;
+}
+.backbt:active{
+  box-shadow: 0 5px #173e19;
+}
+.shinybt:active{
+  box-shadow: 0 5px #46460c;
+}
+
+.topbut{
 
 }
