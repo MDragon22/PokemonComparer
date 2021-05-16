@@ -1,3 +1,50 @@
-.nisbox2{
-  margin-top: 101px;
+.nisbox2 {
+    margin-top: 101px;
+}
+
+.stylefixcomparer {
+    margin-top: 10px;
+    border-top: groove #757575 3px;
+}
+
+.buttonfix {
+    cursor: pointer;
+    user-select: none;
+    color: rgba(0, 0, 0, 0.9);
+    text-transform: capitalize;
+    font-size: 1.25em;
+    padding: 2px;
+    border: groove #757575 3px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: rgba(255, 255, 255, 0.3) -1px 1px;
+    align-self: center;
+    background: linear-gradient(14deg, #21c121 10%, #8ffb8f 25%, #17e617 47%, #8cf58c 73%, #c4f7c4 74%, #91ff91 80%);
+    background-blend-mode: hard-light;
+    right: 0;
+    margin-bottom: 5px;
+}
+
+.buttonfix.pressed {
+    box-shadow: 0 9px #318635;
+}
+
+.buttonfix:active {
+    box-shadow: 0 5px #173e19;
+}
+
+.inputfix {
+    margin-right: 5px;
+    width: 240px;
+    border-radius: 10px;
+    background: linear-gradient( 14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
+    border: inset #879a65 3px;
+}
+
+.pokesearchbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

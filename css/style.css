@@ -101,16 +101,6 @@ body {
     min-width: 1000px;
 }
 
-.footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    background-color: #00bcd4;
-    box-shadow: inset 0px 0px 10px blue;
-}
-
 .pokefonte {
     font-family: "pokemon-font";
 }

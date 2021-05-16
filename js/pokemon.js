@@ -15,6 +15,7 @@ function run() {
     var input = "error"
     if (document.getElementById("inputpoke").value != "") {
         var input = document.getElementById("inputpoke").value;
+        input = input.toLowerCase();
         var fetchpokemon = apibase + input;
         runfetch(fetchpokemon);
     } else {
@@ -118,26 +119,27 @@ async function movesbuild() {
             movestat3 = "xxx";
         }
         if (String(movestat1).length == 2) {
-            document.getElementById("movestat1").innerHTML = "Accuracy......" + movestat1;
+            movestat1 = "Accuracy......" + movestat1;
         } else {
-            document.getElementById("movestat1").innerHTML = "Accuracy....." + movestat1;
+            movestat1 = "Accuracy....." + movestat1;
         }
         if (String(movestat2).length == 2) {
-            document.getElementById("movestat2").innerHTML = "Power........." + movestat2;
+            movestat2 = "Power........." + movestat2;
         } else {
-            document.getElementById("movestat2").innerHTML = "Power........" + movestat2;
+            movestat2 = "Power........" + movestat2;
         }
         if (String(movestat3).length == 2) {
-            document.getElementById("movestat3").innerHTML = "PP............" + movestat3;
+            movestat3 = "PP............" + movestat3;
         } else {
-            document.getElementById("movestat3").innerHTML = "PP..........." + movestat3;
+            movestat3 = "PP..........." + movestat3;
         }
 
     }
     document.getElementById("movetotal").innerHTML = movetotal;
     document.getElementById("movename").innerHTML = movename;
-
-
+    document.getElementById("movestat1").innerHTML = movestat1;
+    document.getElementById("movestat2").innerHTML = movestat2;
+    document.getElementById("movestat3").innerHTML = movestat3;
     document.getElementById("movetype").innerHTML = movetype;
     document.getElementById("movelearn").innerHTML = movelearn;
 }
