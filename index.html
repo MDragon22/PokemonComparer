@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body class="home" onload="initialpoke()">
     <div class="header">
         <h1>Pokemano</h1>
         <p>The <b>website</b> created to compare all the pokemon stats</p>
@@ -34,83 +34,160 @@
 
             <div class="statbox">
 
-              <div class="bluebutton"></div>
 
-              <div class="redbox box1">
-              <div class="nameIDsprite">
-                <div class="pokenameID">
-                    <p class="pokefonte pokename" id="pokename">bulbasaur</p>
-                    <p class="pokefonte pokeID" id="pokeID">#001</p>
-                </div>
-                <div class="spritecont">
-                  <img class="sprite" id="pokemonsprite" alt="imagempokemon">
-                </div>
-                <div onclick="toggleonoff();" class="redbutton"></div>
-                <div class="decorationlines">
-                  <div class="linedec"></div>
-                  <div class="linedec"></div>
-                  <div class="linedec"></div>
-                  <div class="linedec"></div>
-                </div>
-              </div>
-              <div class="topbut">
-              <div class="shinybt pressed pokefonte">Shiny</div>
-              <div class="backbt pressed pokefonte">Back</div>
-              </div>
-              <div class="smalldesc">
-                <p id="infohabitat">Habitat:grasslands</p>
-                <p id="infogender">Gender:F12,5%-M87,5%</p>
-                <p id="infoheight">Height:result</p>
-                <p id="infoweight">Weight:6,5kg</p>
-              </div>
-              <div class="buttonElement">
-                <div class="buttoncross">
-                    <div class="crossCenter">
-                      <div onclick="crossLeft()" class="crossLeft pressed"><i class="arrow left"></i></div>
-                      <div onclick="crossRight()" class="crossRight pressed"><i class="arrow right"></i></div>
-                      <div class="crossBottom pressed"><i class="arrow down"></i></div>
-                      <div class="crossTop "><i class="arrow up"></i></div>
-                      <div class=crossCircle></div>
+                <div class="bluebutton"></div>
+                <div class="smallbutton"></div>
+                <div class="smallbutton byel"></div>
+                <div class="smallbutton bgre"></div>
+                <div class="redbox box1">
+                    <div class="stylefix"></div>
+                    <div class="nameIDsprite">
+                        <div class="pokenameID">
+                            <p class="pokefonte pokename" id="pokename">bulbasaur</p>
+                            <p class="pokefonte pokeID" id="pokeID">#001</p>
+                        </div>
+                        <div class="spritecont">
+                            <img class="sprite" id="pokemonsprite" alt="imagempokemon">
+                        </div>
+                        <div class="redbutton"></div>
+                        <div class="decorationlines">
+                            <div class="linedec"></div>
+                            <div class="linedec"></div>
+                            <div class="linedec"></div>
+                            <div class="linedec"></div>
+                        </div>
+                    </div>
+
+                    <div class="topbut">
+                        <div onclick="toggleshiny()" class="shinybt pressed pokefonte">Shiny</div>
+                        <div onclick="toggleback()" class="backbt pressed pokefonte">Back</div>
+                    </div>
+                    <div class="smalldesc">
+                        <p id="infohabitat">Habitat:grasslands</p>
+                        <p id="infogender">Gender:F12,5%-M87,5%</p>
+                        <p id="infoheight">Height:result</p>
+                        <p id="infoweight">Weight:6,5kg</p>
+                    </div>
+                    <div class="buttonElement">
+                        <div class="buttoncross">
+                            <div class="crossCenter">
+                                <div onclick="crossLeft()" class="crossLeft pressed"><i class="arrow left"></i></div>
+                                <div onclick="crossRight()" class="crossRight pressed"><i class="arrow right"></i></div>
+                                <div onclick="togglemovedown()" class="crossBottom pressed"><i class="arrow down"></i></div>
+                                <div onclick="togglemoveup()" class="crossTop "><i class="arrow up"></i></div>
+                                <div class=crossCircle></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
+                <div class="separador">
+                    <div class="ponta"></div>
+                    <div class="meio"></div>
+                    <div class="ponta"></div>
+                </div>
+                <div class="redbox box2">
+                    <div class="leftprimeiralinha">
+                        <div class="statscreen pokefonte">
+                            <div id="linha0" class="statslinha">hp................45</div>
+                            <div id="linha1" class="statslinha">Attack............49</div>
+                            <div id="linha2" class="statslinha">Defense...........49</div>
+                            <div id="linha3" class="statslinha">Special-Attack....65</div>
+                            <div id="linha4" class="statslinha">Special-Defense...65</div>
+                            <div id="linha5" class="statslinha">Speed.............45</div>
+                        </div>
+                        <div class="containerbarras">
+                            <div class="contb">
+                                <div id="barra0" class="barrastats barra0"></div>
+                            </div>
+                            <div class="contb">
+                                <div id="barra1" class="barrastats barra1"></div>
+                            </div>
+                            <div class="contb">
+                                <div id="barra2" class="barrastats barra2"></div>
+                            </div>
+                            <div class="contb">
+                                <div id="barra3" class="barrastats barra3"></div>
+                            </div>
+                            <div class="contb">
+                                <div id="barra4" class="barrastats barra4"></div>
+                            </div>
+                            <div class="contb">
+                                <div id="barra5" class="barrastats barra5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="flavorscreen" class="flavorscreen pokefonte">sample text</div>
+                    <div class="bluebtcont">
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                        <div class="blue-button"></div>
+                    </div>
+                    <div class="movewrapper">
+                        <div class="movenumbercont">
+                            <div class="movecont">
+                                <div class="leftbox pokefonte">
+                                    <div id="movename" class="move-name">pound</div>
+                                    <div id="movestat1" class="move-stat">Accuracy.....100</div>
+                                    <div id="movestat2" class="move-stat">Power.........40</div>
+                                    <div id="movestat3" class="move-stat">PP............35</div>
+                                </div>
+                                <div class="rightbox pokefonte">
+                                    <div id="movetype" class="move-type">normal</div>
+                                    <div id="movelearn" class="move-learn">Learn: Lvl 1</div>
+                                </div>
+                            </div>
+                            <div class="movecomlumn">
+                                <div onclick="movego()" class="pokefonte moveb mtop"> GO!
+                                </div>
+                                <input id="movenumber" class="movenumber pokefonte" min="0" type="number" value="1">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="boxmove">
+                        <p class="pokefonte moves">moves</p>
+                        <div id="movetotal" class="pokefonte totalmoves">999</div>
+
+                    </div>
+                    <div class="typewrap">
+                        <div class="pokefonte poketype1">
+                            type 1
+                            <p id="type1" class="type type1 pokefonte" name="">Tipo 1</p>
+
+                        </div>
+                        <div class="pokefonte poketype2">
+                            type 2
+                            <p id="type2" class="type type2 pokefonte" name="">Tipo 2</p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="separador">
-              <div class="ponta"></div>
-                <div class="meio"></div>
-                <div class="ponta"></div>
-            </div>
-            <div class="redbox box2"></div>
-          </div>
-
-
-                <!--<img class="sprite" id="pokemonbacksprite" alt="imagempokemon">-->
-
-                <div class="poketype">
-                    <p id="type1" class="type type1 pokefonte" name="">Tipo 1</p>
-                    <p id="type2" class="type type2 pokefonte" name="">Tipo 2</p>
-                </div>
-
-
-
-
-                <p class="pokefonte">Exemplo alguma barra status</p>
-
-                <div class="containerbarras">
-                    <div class="contb">
-                        <div id="barra0" class="barrastats barra0">90</div>
-                    </div>
-                    <div class="contb">
-                        <div id="barra1" class="barrastats barra1">90</div>
-                    </div>
-                    <div class="contb">
-                        <div id="barra2" class="barrastats barra2">90</div>
-                    </div>
-                </div>
-
-
-
         </div>
+
+
+        <!--<img class="sprite" id="pokemonbacksprite" alt="imagempokemon">-->
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
     </div>
 
 
@@ -119,6 +196,6 @@
         <h2>Pêzeiro</h2>
     </div>
 </body>
-<script type="text/javascript" src="js\pokemon.js"></script>
+
 
 </html>
